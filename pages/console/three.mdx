@@ -1,0 +1,168 @@
+### Create a new React App
+
+To get started, first create a new React app, and then install and use the Amplify CLI to start adding backend capabilities to your app.<br></br>
+
+### Initialize a new backend
+
+When you initialize Amplify you'll be prompted for some information about the app, with the option to accept recommended values:
+
+<CH.Scrollycoding>
+
+### Step 1
+
+Enter a name for the project:
+
+```js mark=1:2
+? Enter a name for the project reactamplified
+The following configuration will be applied:
+
+? Project information
+| Name:  reactamplified
+| Environment: dev
+| Default editor: Visual Studio Code
+| App type: javascript
+| Javascript framework: react
+| Source Directory Path: src
+| Distribution Directory Path: build
+| Build Command: npm run-script build
+| Start Command: npm run-script start
+
+? Initialize the project with the above configuration? Yes
+Using default provider  awscloudformation
+? Select the authentication method you want to use: AWS profile
+
+...
+
+? Please choose the profile you want to use default
+```
+
+---
+
+### Step 2
+
+Project information:
+
+```js mark=4:13
+? Enter a name for the project reactamplified
+The following configuration will be applied:
+
+? Project information
+| Name:  reactamplified
+| Environment: dev
+| Default editor: Visual Studio Code
+| App type: javascript
+| Javascript framework: react
+| Source Directory Path: src
+| Distribution Directory Path: build
+| Build Command: npm run-script build
+| Start Command: npm run-script start
+
+? Initialize the project with the above configuration? Yes
+Using default provider  awscloudformation
+? Select the authentication method you want to use: AWS profile
+
+...
+
+? Please choose the profile you want to use default
+```
+
+---
+
+### Step 3
+
+Initialize the project:
+
+```js mark=15:16
+? Enter a name for the project reactamplified
+The following configuration will be applied:
+
+? Project information
+| Name:  reactamplified
+| Environment: dev
+| Default editor: Visual Studio Code
+| App type: javascript
+| Javascript framework: react
+| Source Directory Path: src
+| Distribution Directory Path: build
+| Build Command: npm run-script build
+| Start Command: npm run-script start
+
+? Initialize the project with the above configuration? Yes
+Using default provider  awscloudformation
+? Select the authentication method you want to use: AWS profile
+
+...
+
+? Please choose the profile you want to use default
+```
+
+---
+
+### Step 4
+
+Select the authentication method:
+
+```js mark=17:17
+? Enter a name for the project reactamplified
+The following configuration will be applied:
+
+? Project information
+| Name:  reactamplified
+| Environment: dev
+| Default editor: Visual Studio Code
+| App type: javascript
+| Javascript framework: react
+| Source Directory Path: src
+| Distribution Directory Path: build
+| Build Command: npm run-script build
+| Start Command: npm run-script start
+
+? Initialize the project with the above configuration? Yes
+Using default provider  awscloudformation
+? Select the authentication method you want to use: AWS profile
+
+...
+
+? Please choose the profile you want to use default
+```
+
+---
+
+### Step 5
+
+Choose the profile you want:
+
+```js mark=21:21
+? Enter a name for the project reactamplified
+The following configuration will be applied:
+
+? Project information
+| Name:  reactamplified
+| Environment: dev
+| Default editor: Visual Studio Code
+| App type: javascript
+| Javascript framework: react
+| Source Directory Path: src
+| Distribution Directory Path: build
+| Build Command: npm run-script build
+| Start Command: npm run-script start
+
+? Initialize the project with the above configuration? Yes
+Using default provider  awscloudformation
+? Select the authentication method you want to use: AWS profile
+
+...
+
+? Please choose the profile you want to use default
+```
+
+</CH.Scrollycoding>
+
+When you initialize a new Amplify project, a few things happen:
+
+- It creates a top level directory called amplify that stores your backend definition. During the tutorial you'll add capabilities such as a GraphQL API and authentication. As you add features, the amplify folder will grow with infrastructure-as-code templates that define your backend stack. Infrastructure-as-code is a best practice way to create a replicable backend stack.
+- It creates a file called aws-exports.js in the src directory that holds all the configuration for the services you create with Amplify. This is how the Amplify client is able to get the necessary information about your backend services.
+- It modifies the .gitignore file, adding some generated files to the ignore list
+- A cloud project is created for you in the AWS Amplify Console that can be accessed by running amplify console. The Console provides a list of backend environments, deep links to provisioned resources per Amplify category, status of recent deployments, and instructions on how to promote, clone, pull, and delete backend resources
+
+<div style={{ height: 999 }} />
