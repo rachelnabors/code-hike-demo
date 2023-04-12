@@ -56,6 +56,10 @@ navbar .side_item:first-child {
   margin-top: 4rem;
 }
 
+.codehike h3 {
+  margin-bottom: 0;
+}
+
 .codehike a {
   margin-bottom: 1rem;
 }
