@@ -51,8 +51,13 @@ navbar .side_item:first-child {
 .codehike {
   display: flex;
   flex-direction: column;
+  width: 100%;
   padding: 1.5rem 2rem;
   margin-top: 4rem;
+}
+
+.codehike a {
+  margin-bottom: 1rem;
 }
 
 .modules,

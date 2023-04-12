@@ -1,0 +1,175 @@
+## Add the Amplify UI Authenticator component
+
+You used two Amplify UI components, `Heading` and `Button`. You could also convert the rest of the app to Amplify UI components by replacing the `p` tags with `Text`, the `input`s with `TextFields` and the `div`s with `View`s.
+
+#### Open src/App.js and make the following changes:
+
+<CH.Scrollycoding>
+
+### Step 1
+
+Add the `Text`, `TextField`, `View` components to the imported components from Amplify UI:
+
+```js app.js mark=1:1
+import { withAuthenticator, Button, Heading, Text, TextField, View } from '@aws-amplify/ui-react';
+
+<div style={styles.container}>
+  <Heading level={1}>Hello {user.username}</Heading>
+  <Button onClick={signOut} style={styles.button}>
+    Sign out
+  </Button>
+  <h2>Amplify Todos</h2>
+  <input
+    onChange={(event) => setInput('name', event.target.value)}
+    style={styles.input}
+    value={formState.name}
+    placeholder='Name'
+  />
+  <input
+    onChange={(event) => setInput('description', event.target.value)}
+    style={styles.input}
+    value={formState.description}
+    placeholder='Description'
+  />
+  <button style={styles.button} onClick={addTodo}>
+    Create Todo
+  </button>
+  {todos.map((todo, index) => (
+    <div key={todo.id ? todo.id : index} style={styles.todo}>
+      <p style={styles.todoName}>{todo.name}</p>
+      <p style={styles.todoDescription}>{todo.description}</p>
+    </div>
+  ))}
+</div>;
+```
+
+---
+
+### Step 2
+
+Replace `div`s with `View`s in your App component:
+
+```js app.js
+import { withAuthenticator, Button, Heading, Text, TextField, View } from '@aws-amplify/ui-react';
+
+<View style={styles.container}>
+  <Heading level={1}>Hello {user.username}</Heading>
+  <Button onClick={signOut} style={styles.button}>
+    Sign out
+  </Button>
+  <h2>Amplify Todos</h2>
+  <input
+    onChange={(event) => setInput('name', event.target.value)}
+    style={styles.input}
+    value={formState.name}
+    placeholder='Name'
+  />
+  <input
+    onChange={(event) => setInput('description', event.target.value)}
+    style={styles.input}
+    value={formState.description}
+    placeholder='Description'
+  />
+  <button style={styles.button} onClick={addTodo}>
+    Create Todo
+  </button>
+  {todos.map((todo, index) => (
+    <View key={todo.id ? todo.id : index} style={styles.todo}>
+      <p style={styles.todoName}>{todo.name}</p>
+      <p style={styles.todoDescription}>{todo.description}</p>
+    </View>
+  ))}
+</View>;
+```
+
+---
+
+### Step 3
+
+Replace `input`s with `TextField`s in your App component:
+
+```js app.js
+import { withAuthenticator, Button, Heading, Text, TextField, View } from '@aws-amplify/ui-react';
+
+<View style={styles.container}>
+  <Heading level={1}>Hello {user.username}</Heading>
+  <Button onClick={signOut} style={styles.button}>
+    Sign out
+  </Button>
+  <h2>Amplify Todos</h2>
+  <TextField
+    onChange={(event) => setInput('name', event.target.value)}
+    style={styles.input}
+    value={formState.name}
+    placeholder='Name'
+  />
+  <TextField
+    onChange={(event) => setInput('description', event.target.value)}
+    style={styles.input}
+    value={formState.description}
+    placeholder='Description'
+  />
+  <button style={styles.button} onClick={addTodo}>
+    Create Todo
+  </button>
+  {todos.map((todo, index) => (
+    <View key={todo.id ? todo.id : index} style={styles.todo}>
+      <p style={styles.todoName}>{todo.name}</p>
+      <p style={styles.todoDescription}>{todo.description}</p>
+    </View>
+  ))}
+</View>;
+```
+
+---
+
+### Step 4
+
+Replace the `p` tags with `Text`:
+
+```js app.js
+import { withAuthenticator, Button, Heading, Text, TextField, View } from '@aws-amplify/ui-react';
+
+<View style={styles.container}>
+  <Heading level={1}>Hello {user.username}</Heading>
+  <Button onClick={signOut} style={styles.button}>
+    Sign out
+  </Button>
+  <h2>Amplify Todos</h2>
+  <TextField
+    onChange={(event) => setInput('name', event.target.value)}
+    style={styles.input}
+    value={formState.name}
+    placeholder='Name'
+  />
+  <TextField
+    onChange={(event) => setInput('description', event.target.value)}
+    style={styles.input}
+    value={formState.description}
+    placeholder='Description'
+  />
+  <button style={styles.button} onClick={addTodo}>
+    Create Todo
+  </button>
+  {todos.map((todo, index) => (
+    <View key={todo.id ? todo.id : index} style={styles.todo}>
+      <Text style={styles.todoName}>{todo.name}</Text>
+      <Text style={styles.todoDescription}>{todo.description}</Text>
+    </View>
+  ))}
+</View>;
+```
+
+</CH.Scrollycoding>
+
+Using Amplify UI components together makes it easier to manage styling across your entire app.
+
+In this example, you used the Amplify React UI library and the `withAuthenticator` component to quickly get up and running with a real-world authentication flow.
+
+You can also customize this component to add or remove fields, update styling, or other configurations. You can even override function calls if needed.
+
+In addition to the `withAuthenticator`, you can build custom authentication flows Amplify Libraries for JS. Amplify's `Auth` class has over 30 methods including `signUp`, `signIn`, `forgotPassword`, and `signOut` that allow you full control over all aspects of the user authentication flow. Check out the complete API here.
+
+In the next section, you'll host your app on the Amplify Console, a hosting service complete with a globally available CDN, atomic deployments, easy custom domains, and CI / CD.
+
+<div style={{ height: 999 }} />

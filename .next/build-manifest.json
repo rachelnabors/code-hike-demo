@@ -30,15 +30,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/console/one": [
+    "/consoleOutput/highlight": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/console/one.js"
+      "static/chunks/pages/consoleOutput/highlight.js"
     ],
-    "/console/two": [
+    "/consoleOutput/spotlight": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/console/two.js"
+      "static/chunks/pages/consoleOutput/spotlight.js"
     ]
   },
   "ampFirstPages": []

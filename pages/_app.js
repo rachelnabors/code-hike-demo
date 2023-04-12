@@ -52,6 +52,7 @@ function MyApp({ Component, pageProps }) {
         })}
       </navbar>
       <div className='codehike'>
+        <a href='/'>Home</a>
         <Component {...pageProps} />
       </div>
       <navbar className='quicklinks'>
