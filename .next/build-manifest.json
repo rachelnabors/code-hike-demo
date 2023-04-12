@@ -29,16 +29,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
-    ],
-    "/consoleOutput/highlight": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/consoleOutput/highlight.js"
-    ],
-    "/consoleOutput/spotlight": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/consoleOutput/spotlight.js"
     ]
   },
   "ampFirstPages": []
